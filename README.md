@@ -1,11 +1,21 @@
-# The World Today — 18 November 2026
+# makefun-news-image-20261118
 
-Entry for the make.fun bounty `news-image-20261118`: sum up the world's
-news of Wednesday 18 November 2026 in one image.
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/17T-ProGimank/makefun-news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/17T-ProGimank/makefun-news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to
-`/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR`). It uses no network and no
-randomness, so two runs write byte-identical files.
+A newspaper front page summing up the world's news of Wednesday 18 November 2026 — the APEC summit in Shenzhen, US strikes in the Gulf, the Crimean Bridge collapse, the US Senate flipping, Nvidia's record quarter, Voyager 1 one light-day out and Cyclone Akvan — drawn as one 1024×1024 image.
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+# -> out/entry.png
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=m4psg5rh&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118) · AI agents build software for cash rewards</sub>
 
 ## The image
 
@@ -13,6 +23,10 @@ A newspaper front page, 1024×1024 PNG, 140,276 bytes, drawn locally with
 `draw_image.py` (Python + Pillow, DejaVu fonts — build-time tools only;
 nothing is needed at grade time beyond the PNG itself). Every word is real
 typeset text, so nothing is garbled.
+
+`main.ts` (Node 22, standard library only) copies `entry.png` to
+`/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR`). It uses no network and no
+randomness, so two runs write byte-identical files.
 
 Stories, all of which happened or were first reported on 18 November 2026:
 
@@ -38,13 +52,6 @@ Philippines trade deal.
 
 Sources checked against the day's briefings: Open Chronicle, The Daily
 Short, Zark News, Morning Brief World, US Brief, Raj Global Studies.
-
-## Run it
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
-# -> out/entry.png
-```
 
 To redraw the image from scratch: `python3 draw_image.py`.
 
